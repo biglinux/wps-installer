@@ -1,0 +1,85 @@
+#!/bin/bash
+
+export TEXTDOMAINDIR="/usr/share/locale"
+export TEXTDOMAIN=wps-office-installer
+
+# Import BigControlCenter base modules / Importa os módulos básicos do BigControlCenter
+# That's include jquery and materialize / Isso inclui o jquery e o materialize
+# http://materializecss.com/
+. /usr/share/bigbashview/bcc/shell/base.sh
+
+
+#Title/Description variables
+bcc_title="WPS Office"
+bcc_description=$"Instalar ou atualizar"
+# To disable logo use: bcc_logo="no"
+bcc_logo="logo.png"
+
+# About variables
+# To disable about use: bcc_about="no"
+bcc_about="yes"
+bcc_about_license=$"GPL v2 or greater"
+bcc_about_by=$"Bruno Gonçalves"
+bcc_about_release_date=$"15/07/2017"
+bcc_about_url_code=$"https://github.com/biglinux/bigkernel"
+bcc_about_url_project=$"https://www.biglinux.com.br"
+
+# Print header in screen
+bcc_header
+
+
+###############
+# Start Content
+
+# Search last version and link
+curl http://wps-community.org/download.html | grep amd64.deb | sed 's|amd64.deb.*|amd64.deb|g;s|.*http://|http://|g' > /tmp/wps-link.txt
+
+last_version="$(cat /tmp/wps-link.txt | sed 's|.*http://|http://|g;s|.*wps-office_||g;s|_amd64.*||g')"
+installed_version="$(dpkg -s wps-office | grep Version | cut -f2 -d" ")"
+download_link=$(cat /tmp/wps-link.txt)
+
+echo '<form action="wait1.sh.htm" method="get"><br><br>'
+
+echo $"A suíte WPS Office fornece editor de textos, planilhas e apresentações. Não é software livre, porém, em alguns casos, arquivos criados na suíte Microsoft Office que não funcionam corretamente no Libre Office, funcionam corretamente no WPS."
+
+echo "<br><br>"
+    
+if [ "$installed_version" != "" ]; then
+    echo "<br><br>"
+    echo $"Versão instalada:" "$installed_version."
+
+    echo "<br><br>"
+    echo "<a href=\"wait1.sh.htm?remove=1\"><font color=#005d88>" $"Clique aqui para desinstalar o WPS." "</a>"
+
+else
+    echo "<br><br>"
+    echo $"Não detectei nenhuma instalação do WPS neste computador."
+fi
+
+
+
+echo "<br><br>"
+echo "<a href=\"wait1.sh.htm\"><font color=#005d88>" $"Clique aqui para instalar a versão mais recente disponível para download:" "$last_version.</a>"
+
+
+
+
+
+
+###################
+# Close content div
+echo '</div>'
+
+##############
+# Start footer
+echo '<div id="bcc_footer">'
+      echo '<div id="bcc_footer_right">'
+        echo '<a href="/usr/share/bigbashview/close.sh" class="waves-effect waves-light btn blue-grey lighten-1"><img src=cancel.png>'$"Fechar"'</a>'
+      echo '</div>'
+echo '</div>'
+echo '</form>'
+
+
+#########
+# The end
+echo '</body>'

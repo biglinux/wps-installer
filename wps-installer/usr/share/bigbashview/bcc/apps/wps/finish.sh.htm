@@ -1,0 +1,60 @@
+#!/bin/bash
+
+export TEXTDOMAINDIR="/usr/share/locale"
+export TEXTDOMAIN=bigkernel
+
+# Import BigControlCenter base modules / Importa os módulos básicos do BigControlCenter
+# That's include jquery and materialize / Isso inclui o jquery e o materialize
+# http://materializecss.com/
+. /usr/share/bigbashview/bcc/shell/base.sh
+
+
+#Title/Description variables
+bcc_title="WPS Office"
+bcc_description=$"Instalar ou atualizar"
+# To disable logo use: bcc_logo="no"
+bcc_logo="logo.png"
+
+# About variables
+# To disable about use: bcc_about="no"
+bcc_about="yes"
+bcc_about_license=$"GPL v2 or greater"
+bcc_about_by=$"Bruno Gonçalves"
+bcc_about_release_date=$"15/07/2017"
+bcc_about_url_code=$"https://github.com/biglinux/bigkernel"
+bcc_about_url_project=$"https://www.biglinux.com.br"
+
+# Print header in screen
+bcc_header
+
+
+###############
+# Start Content
+
+echo "<br><br><br><br><br><br><center><b>"
+
+echo "Concluído"
+
+echo "</center></b>"
+
+
+###################
+# Close content div
+echo '</div>'
+
+
+
+##############
+# Start footer
+echo '<div id="bcc_footer">'
+      echo '<div id="bcc_footer_right">'
+        echo '<a href="index.sh.htm" class="waves-effect waves-light btn blue-grey lighten-1"><img src=cancel.png>'$"Voltar"'</a>'
+        echo '<a href="/usr/share/bigbashview/close.sh" class="waves-effect waves-light btn blue-grey"><img src=cancel.png>'$"Fechar"'</a>'
+      echo '</div>'
+echo '</div>'
+echo '</form>'
+
+
+#########
+# The end
+echo '</body>'

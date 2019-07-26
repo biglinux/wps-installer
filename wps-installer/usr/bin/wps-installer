@@ -1,0 +1,3 @@
+#!/bin/sh
+
+bigbashview /usr/share/bigbashview/bcc/apps/wps/index.sh.htm -s 950x500 -i /usr/share/bigbashview/bcc/apps/wps/logo.png

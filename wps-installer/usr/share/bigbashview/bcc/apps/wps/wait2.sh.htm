@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export TEXTDOMAINDIR="/usr/share/locale"
+export TEXTDOMAIN=bigkernel
+
+
+if [ "$p_remove" = "1" ]; then
+    bigsudo urxvt  +sb -fn "xft:Ubuntu Mono:pixelsize=16" -embed $(xprop -root '\t$0' _NET_ACTIVE_WINDOW | cut -f 2) -e /usr/share/bigbashview/bcc/apps/wps/run-terminal.sh remove
+else
+    bigsudo urxvt  +sb -fn "xft:Ubuntu Mono:pixelsize=16" -embed $(xprop -root '\t$0' _NET_ACTIVE_WINDOW | cut -f 2) -e /usr/share/bigbashview/bcc/apps/wps/run-terminal.sh 
+fi
+
+
+
+echo '<script type="text/javascript">'
+    echo "window.location.href = \"finish.sh.htm\""
+echo '</script>'
+
+
+

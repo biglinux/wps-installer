@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=WPS installer
+Name[pt]=Instalar/atualizar o WPS office
+Exec=wps-installer
+Icon=wps
+Type=Application
+StartupNotify=true
+Categories=Office;
