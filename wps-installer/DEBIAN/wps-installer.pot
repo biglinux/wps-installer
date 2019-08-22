@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the wps-installer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: wps-installer\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2019-08-18 23:04-0300\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "Instalar ou atualizar"
+msgstr  ""
+
+msgid   "GPL v2 or greater"
+msgstr  ""
+
+msgid   "Bruno Gonçalves"
+msgstr  ""
+
+msgid   "15/07/2017"
+msgstr  ""
+
+msgid   "https://github.com/biglinux/bigkernel"
+msgstr  ""
+
+msgid   "https://www.biglinux.com.br"
+msgstr  ""
+
+msgid   "Voltar"
+msgstr  ""
+
+msgid   "Fechar"
+msgstr  ""
+
+msgid   "Aguarde..."
+msgstr  ""
+
+msgid   "A suíte WPS Office fornece editor de textos, planilhas e "
+        "apresentações. Não é software livre, porém, em alguns casos, "
+        "arquivos criados na suíte Microsoft Office que não funcionam "
+        "corretamente no Libre Office, funcionam corretamente no WPS."
+msgstr  ""
+
+msgid   "Versão instalada:"
+msgstr  ""
+
+msgid   "Clique aqui para desinstalar o WPS."
+msgstr  ""
+
+msgid   "Não detectei nenhuma instalação do WPS neste computador."
+msgstr  ""
+
+msgid   "Clique aqui para instalar a versão mais recente disponível para "
+        "download:"
+msgstr  ""
