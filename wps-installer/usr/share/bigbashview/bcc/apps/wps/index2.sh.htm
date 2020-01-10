@@ -32,7 +32,12 @@ bcc_header
 # Start Content
 
 # Search last version and link
-curl http://wps-community.org/download.html | grep amd64.deb | sed 's|amd64.deb.*|amd64.deb|g;s|.*http://|http://|g' > /tmp/wps-link.txt
+
+wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=wps-office -O /tmp/wps-link-orig.txt
+. /tmp/wps-link-orig.txt
+
+
+echo "$source" > /tmp/wps-link.txt
 
 last_version="$(cat /tmp/wps-link.txt | sed 's|.*http://|http://|g;s|.*wps-office_||g;s|_amd64.*||g')"
 installed_version="$(dpkg -s wps-office | grep Version | cut -f2 -d" ")"
