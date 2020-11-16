@@ -65,7 +65,7 @@ function sleep (time) {
 # Fix to interface don't crash
 echo 'sleep(200).then(() => {'
 
-if [ "$p_remove" = "1" ]; then
+if [ "$remove" = "1" ]; then
     echo "window.location.href = \"wait2.sh.htm?remove=1\""
 else
     echo "window.location.href = \"wait2.sh.htm\""
